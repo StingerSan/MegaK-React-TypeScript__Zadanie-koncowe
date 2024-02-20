@@ -1,8 +1,10 @@
-import {Gift} from "../../types/gifts";
+import React from "react";
+import { GiftEntity } from "../../../../../Mega K/Etap 5 Type Script/Zadanie - Przepisywanie projektu z JS na TS/Projekt API do podłaczenia pod aplikacje Reactowa/Projekt 3/Lista prezentów przerabiamy na TS/types/gift";
+
 
 
 interface Props {
-    gift: Gift
+    gift: GiftEntity
 }
 
 export const GiftTableRow = (props: Props)=>  (
