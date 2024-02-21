@@ -1,11 +1,11 @@
 import React from "react";
-import { GiftEntity } from "../../../../../Mega K/Etap 5 Type Script/Zadanie - Przepisywanie projektu z JS na TS/Projekt API do podłaczenia pod aplikacje Reactowa/Projekt 3/Lista prezentów przerabiamy na TS/types/gift";
-
+import { GiftEntity } from "types";
 import { GiftTableRow } from "./GiftTableRow";
 
 
 interface Props {
     gifts: GiftEntity[];
+    onGiftsChange: () => void;
 }
 
 export const GiftsTable = (props: Props) => (
@@ -15,6 +15,7 @@ export const GiftsTable = (props: Props) => (
             <th>Id</th>
             <th>Nazwa</th>
             <th>Ilość</th>
+            <th>Akcja</th>
         </tr>
         </thead>
         <tbody>
@@ -23,6 +24,7 @@ export const GiftsTable = (props: Props) => (
                 <GiftTableRow
                     gift={gift}
                     key={gift.id}
+                    onGiftsChange={props.onGiftsChange}
                 />))
         }
         </tbody>
