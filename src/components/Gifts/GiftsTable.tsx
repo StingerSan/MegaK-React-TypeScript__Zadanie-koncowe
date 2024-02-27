@@ -12,7 +12,6 @@ export const GiftsTable = (props: Props) => (
     <table>
         <thead>
         <tr>
-            <th>Id</th>
             <th>Nazwa</th>
             <th>Ilość</th>
             <th>Akcja</th>

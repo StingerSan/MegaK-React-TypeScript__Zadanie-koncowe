@@ -3,7 +3,8 @@ import {GiftsView} from "./views/GiftsView";
 import {Route, Routes} from "react-router-dom";
 import {Header} from "./components/Header/Header";
 import { NotFoundView } from './views/NotFoundView';
-import {TestView} from "./views/TestView";
+import {ChildView} from "./views/ChildView";
+import {SingleGiftView} from "./views/SingleGiftView";
 
 export const App = () => {
   return (
@@ -11,7 +12,8 @@ export const App = () => {
           <Header/>
           <Routes>
               <Route path="/gift" element={<GiftsView />} />
-              <Route path="/test/:foobar" element={<TestView />} />
+              <Route path="/gift/:idOfGift" element={<SingleGiftView />} />
+              <Route path="/child" element={<ChildView />} />
               <Route path="*" element={<NotFoundView />} />
           </Routes>
       </>
